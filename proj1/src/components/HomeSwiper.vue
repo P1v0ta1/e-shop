@@ -1,8 +1,8 @@
 <script setup>
 // 轮播图内容
 const banner = [
-    '../assets/images/menu4.png',
-    '../assets/images/menu4.png'
+    '/images/banner1.jpg',
+    '/images/banner2.jpg'
 ]
 </script>
 
