@@ -1,4 +1,5 @@
 <script setup>
+import HomeGrid from '@/components/HomeGrid.vue';
 import HomeSwiper from '@/components/HomeSwiper.vue';
 import { showToast } from 'vant';
 import {ref} from 'vue';
@@ -28,6 +29,8 @@ const onCancel=function(){
 <HomeSwiper />
 
 
+
+  <HomeGrid />
   <VanToast />
 </template>
 
