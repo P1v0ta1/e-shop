@@ -28,9 +28,8 @@ const onCancel=function(){
 
 <HomeSwiper />
 
-
-
   <HomeGrid />
+  
   <VanToast />
 </template>
 
