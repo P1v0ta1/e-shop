@@ -31,11 +31,13 @@
         justify-content: space-between;//水平方向俩端对齐
         flex-wrap: wrap;//允许元素自动换行
         li{
-            margin-left: 2%;
-            margin-right: 2%;
-            width: 46%;
+            margin-left: 1.5%;
+            margin-right: 1.5%;
+            width: 47%;
             position: relative; //相对位置
             img{
+                border:3px solid rgb(240, 97, 72);
+                border-radius: 0 15% 10% 15%;
                 width: 100%;
             }
             h4{
@@ -47,6 +49,8 @@
                 color: rgb(230, 79, 79);
                 padding: 2px 4px; //内容与边框之间的间隔，第一位常表示Y轴，第二位x轴
                 border-radius: 0 0 20% 0;
+                
+                
             }
         }
     }
