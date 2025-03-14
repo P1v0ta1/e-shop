@@ -70,6 +70,33 @@ const router = createRouter({
         isShowNav: true,
       }
     },
+    //登录页面
+    {
+      path:"/login",
+      name:"login",
+      component: () => import("../views/LoginView.vue"),
+      meta: {
+        title:"登录",
+        // 显示底部导航栏
+        isTab:true,
+        // 显示顶部导航栏
+        isShowNav:true,
+        isShowBack:true,
+      }
+    },
+    {
+      path:"/registry",
+      name:"registry",
+      component: () => import("../views/RegistryView.vue"),
+      meta: {
+        title:"账号注册",
+        // 显示底部导航栏
+        isTab:true,
+        // 显示顶部导航栏
+        isShowNav:true,
+        isShowBack:true,
+      }
+    },
   ],
 });
 

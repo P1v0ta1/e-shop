@@ -17,15 +17,15 @@ const messagelist = [
         value:"1分钟前",
         label:"请为我们的队伍投票",},
         {id: 4,
-        icon:"/images/heishou.jpg" ,
-        title:"神鹰哥",
-        value:"3分钟前",
-        label:"知不知道什么叫黑手",},
+        icon:"/images/danking.jpg" ,
+        title:"danking",
+        value:"30分钟前",
+        label:"我要打上海major",},
         {id: 5,
-        icon:"/images/heishou.jpg" ,
-        title:"神鹰哥",
-        value:"3分钟前",
-        label:"知不知道什么叫黑手",},
+        icon:"/images/avatar2.jpg" ,
+        title:"Apple",
+        value:"4小时前",
+        label:"[表情]",},
 ];
 
 </script>
@@ -45,6 +45,8 @@ const messagelist = [
         />
     </van-cell-group>
     
+    <van-icon name="https://fastly.jsdelivr.net/npm/@vant/assets/icon-demo.png" />
+
 </template>
 
 <style lang="scss" scoped>

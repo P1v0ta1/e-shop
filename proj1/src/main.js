@@ -1,8 +1,9 @@
 import './assets/main.css'
 
 import { createApp } from 'vue'
-import { Swipe,SwipeItem } from 'vant'
+import { Form,Swipe,SwipeItem } from 'vant'
 import { createPinia } from 'pinia'
+
 
 import App from './App.vue'
 import router from './router'
