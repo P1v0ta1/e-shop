@@ -3,6 +3,7 @@ import HomeGrid from '@/components/HomeGrid.vue';
 import HomeNew from '@/components/HomeNew.vue';
 import HomeProduct from '@/components/HomeProduct.vue';
 import HomeSwiper from '@/components/HomeSwiper.vue';
+import HomeTop from '@/components/HomeTop.vue';
 import { showToast } from 'vant';
 import {ref} from 'vue';
 
@@ -37,6 +38,8 @@ const onCancel=function(){
   <HomeProduct />
 
   <HomeNew />
+
+  <HomeTop />
 </template>
 
 <style lang="scss" scoped>
