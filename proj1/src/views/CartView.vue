@@ -1,18 +1,37 @@
+<!-- (van-empty) https://vant-ui.github.io/vant/#/zh-CN/empty 参考 -->
+             <!-- van-empty用于空状态时的占位 -->
+
+<!-- (router-link)具体操作方法 https://blog.csdn.net/weixin_45667289/article/details/114526437 -->
+    <!-- router-link方法指向某个/dir路径 -->
+        <!-- 之后在index.js中配置相关path import () from '具体vue页面的路径'-->
+
+<!-- (van-button) https://vant-ui.github.io/vant/#/zh-CN/button 参考-->
+
+<!-- (van-swipe-cell) https://vant-ui.github.io/vant/#/zh-CN/swipe-cell 参考-->
+            <!-- 可以左右滑动来展示操作按钮的单元格组件 -->
+
+<!-- (van-checkbox) https://vant-ui.github.io/vant/#/zh-CN/checkbox 参考-->
+                <!-- 多选框组件 -->
+
+<!-- (van-image) https://vant-ui.github.io/vant/#/zh-CN/image 参考-->
+                <!-- 图片组件 -->
+
+<!-- (van-stepper) https://vant-ui.github.io/vant/#/zh-CN/stepper 参考-->
+                <!-- 步进器由增加按钮、减少按钮和输入框组成，用于在一定范围内输入、调整数字 -->
 <template>
     <div class="cart">
         <div class="container">
-            <van-empty
+            <van-empty  
                 description="购物车目前还没有商品"
                 v-show="productList.length === 0"
             >
-                <router-link :to="{ name: 'category'}" >
+            <!-- 在 Vue.js 开发中，router-link 是一个非常重要的组件，它允许用户通过点击链接在具有路由功能的应用程序中进行导航 -->
+                <router-link :to="{ name: 'category'}" > <!-- 指向index.js中配置的category路径 -->
                     <van-button>去购物</van-button>
                 </router-link>
             </van-empty>
-            
             <!-- 购物车列表 -->
             <div v-for="item in productList" :key="item.id" class="list">
-                <!--https://vant-ui.github.io/vant/#/zh-CN/swipe-cell 参考-->
                 <van-swipe-cell>
                     <!-- 复选框 -->
                     <div class="checkbox">
