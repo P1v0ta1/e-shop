@@ -12,6 +12,7 @@
             
             <!-- 购物车列表 -->
             <div v-for="item in productList" :key="item.id" class="list">
+                <!--https://vant-ui.github.io/vant/#/zh-CN/swipe-cell 参考-->
                 <van-swipe-cell>
                     <!-- 复选框 -->
                     <div class="checkbox">
@@ -38,7 +39,11 @@
                     </div>
                     <!-- 右滑删除按钮 -->
                     <template #right>
-                        <van-button square text="删除" type="danger" class="delete-button" />
+                        <van-button square text="删除"
+                         type="danger" 
+                         class="delete-button"
+                         @click="onDelete(item.id)"
+                         />
                     </template>
                 </van-swipe-cell>
             </div>
@@ -49,6 +54,53 @@
 <style lang="scss" scoped>
 .delete-button {
     height: 100%;
+}
+
+.cart{
+    margin: 0.3rem;
+    padding: 0.05rem 0 3rem 0;
+    .container{
+        margin-top: 0.8rem;
+        .list{
+            position: relative;
+            height: 5rem;
+            box-shadow: 0 0 5px #ccc;
+            border-radius: 10px;
+            margin-bottom: 0.8rem;
+        }
+        //复选框
+        .checkbox{
+            position: absolute;
+            top:50%;
+            left: 0.2rem;
+            transform: translate(0,-50%);
+        }
+        .image{
+            position: absolute;
+            top: 50%;
+            left: 2rem;
+            transform: translate(0,-50%);
+        }
+        .info{
+            height: 5rem;
+            display: flex;
+            justify-content: space-around;
+            padding: 0 1rem 0 6rem;
+            align-items: center;
+        }
+        .bottom{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .price{
+                color: red;
+                font-size: 20px;
+                line-height: 22px;
+                height: 22px;
+                margin-right: 0.5rem;
+            }
+        }
+    }
 }
 </style>
 
@@ -97,4 +149,13 @@ const productList = ref([
         check: false,
     }
 ]);
+
+//右滑删除功能
+const onDelete = (id) => {
+    productList.value.forEach((item,index) => {   //foreach遍历回调item里面的所有value
+        if(item.id === id){
+            productList.value.splice(index,1); //splice()用于删除 将对于index的值调整为1
+        }
+    })
+}
 </script>

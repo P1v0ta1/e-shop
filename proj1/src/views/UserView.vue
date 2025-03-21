@@ -42,7 +42,8 @@
         </van-col>
     </van-row>
 
-    <van-cell-group>
+    <!-- vant的行列格子组  -->
+    <van-cell-group>  
         <van-cell icon="records-o" title="全部订单" is-link></van-cell>
         <van-cell icon="points" title="我的积分" is-link></van-cell>
         <van-cell icon="gift-o" title="我的红包" is-link></van-cell>
