@@ -248,7 +248,7 @@ loadCategoryList();
         <div class="left">
             <ul>
                 <li v-for="(item, index) in menus" :key ="index">
-                    <p class="text">{{ item.name }}</p>
+                    <p>{{ item.name }}</p>
                 </li>
             </ul>
         </div>
@@ -256,7 +256,7 @@ loadCategoryList();
          <div class="right">
             <ul>
                 <!-- 遍历一级分类 -->
-                <li v-for="(item, index1) in menus" :key ="index1">
+                <li class="cate" v-for="(item, index1) in menus" :key ="index1">
                     <!-- 一级分类名称 -->
                     <h4 class="title">{{ item.name }}</h4>
                     <ul class="item">
@@ -274,4 +274,51 @@ loadCategoryList();
 
 <style lang="scss" scoped>
 
+.menu{
+    display: flex;
+    position: absolute;
+    text-align: center;
+    top:46px;
+    bottom: 50px;
+    width: 100%;
+    overflow: hidden;
+    //左侧导航
+    .left{
+        flex:0 0 80px;
+        width: 80px;
+        background-color: #f5f5f5;
+        line-height: 55px;
+        li{
+            height: 55px;
+            border-bottom: 1px solid #e1e1e1;
+        }
+    }
+    //右侧内容
+    .right{
+        flex: 1;
+        background: #f5f5f5;
+        //一级分类
+        .cate{
+            height:100%;
+            //一级分类标题
+            .title{
+                margin:0;
+                text-align: left;
+                font-size: 14px;
+                color: #333333;
+                font-weight: bold;
+                margin: 10px;;
+        }
+    }
+        //二级分类
+        .item{
+            li{
+                img{
+                    width: 70px;
+                    height: 70px;
+                }
+            }
+        }
+   }
+}
 </style>
