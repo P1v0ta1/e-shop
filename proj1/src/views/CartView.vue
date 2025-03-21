@@ -39,7 +39,8 @@
                     </div>
                     <!-- 右滑删除按钮 -->
                     <template #right>
-                        <van-button square text="删除"
+                        <van-button 
+                         square text="删除"
                          type="danger" 
                          class="delete-button"
                          @click="onDelete(item.id)"
@@ -152,9 +153,9 @@ const productList = ref([
 
 //右滑删除功能
 const onDelete = (id) => {
-    productList.value.forEach((item,index) => {   //foreach遍历回调item里面的所有value
+    productList.value.forEach((item, index) => {   //foreach遍历回调item里面的所有value
         if(item.id === id){
-            productList.value.splice(index,1); //splice()用于删除 将对于index的值调整为1
+            productList.value.splice(index, 1); //splice()用于删除 将对于index的值调整为1
         }
     })
 }
