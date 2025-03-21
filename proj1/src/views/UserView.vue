@@ -41,6 +41,13 @@
             退款
         </van-col>
     </van-row>
+
+    <van-cell-group>
+        <van-cell icon="records-o" title="全部订单" is-link></van-cell>
+        <van-cell icon="points" title="我的积分" is-link></van-cell>
+        <van-cell icon="gift-o" title="我的红包" is-link></van-cell>
+        <van-cell icon="service-o" title="联系客服" is-link></van-cell>
+    </van-cell-group>
 </template>
 
 <style lang="scss" scoped>
@@ -51,16 +58,19 @@
 
     .user-info-name{
     color: aliceblue;
-    display: inline-block;
+    display: inline-block;//不同的行内元素会排列在同一行
     font-size: 16px;
     padding: 0 5px;
   }
 }
 
 .user-link{
-    :deep(.van-col){
-        display: flex;
-        font-size: 18px;
+    padding: 15px 0;
+    font-size: 12px;
+    text-align: center;
+    .van-icon{
+        display: block;//多个block元素会新起一行（即block元素独占一行）下一节开始才去渲染其他元素
+        font-size: 20px;
     }
 }
 
