@@ -312,10 +312,20 @@ loadCategoryList();
     }
         //二级分类
         .item{
+            margin:7px 10px 10px;
+            display: flex; 
+            overflow: hidden;
+            flex-flow: row wrap;
             li{
+                width: 33.3%;
                 img{
                     width: 70px;
                     height: 70px;
+                }
+                span{
+                    display: inline-block;
+                    font-size: 14px;
+                    color: #333333;
                 }
             }
         }
